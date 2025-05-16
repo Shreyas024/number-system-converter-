@@ -1,0 +1,62 @@
+/* Responsive styles */
+@media (max-width: 639px) {
+  .input-label {
+    font-size: 0.9375rem;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .explanation-title h3 {
+    font-size: 1rem;
+  }
+  
+  .application-title {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .base-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .base-buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .type-buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .applications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .container {
+    padding: 0 var(--spacing-6);
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .applications-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

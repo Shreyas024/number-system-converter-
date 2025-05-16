@@ -1,0 +1,209 @@
+/* Tab component */
+.tab-container {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+  transition: border-color var(--transition-normal);
+}
+
+.tab-button {
+  padding: var(--spacing-3) var(--spacing-4);
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-text-tertiary);
+  transition: color var(--transition-normal), border-color var(--transition-normal);
+}
+
+.tab-button:hover {
+  color: var(--color-text-primary);
+}
+
+.tab-button.active {
+  color: var(--color-primary-500);
+  border-bottom: 2px solid var(--color-primary-500);
+}
+
+.tab-content {
+  padding: var(--spacing-6);
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Input components */
+.input-section {
+  margin-bottom: var(--spacing-8);
+}
+
+.input-group {
+  margin-bottom: var(--spacing-6);
+}
+
+.input-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: var(--spacing-2);
+  color: var(--color-text-primary);
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.number-input {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-normal);
+}
+
+.number-input:focus {
+  outline: none;
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+.dark .number-input:focus {
+  box-shadow: 0 0 0 3px var(--color-primary-900);
+}
+
+.number-input.error {
+  border-color: var(--color-red-500);
+}
+
+.number-input.error:focus {
+  box-shadow: 0 0 0 3px var(--color-red-100);
+}
+
+.dark .number-input.error:focus {
+  box-shadow: 0 0 0 3px var(--color-red-900);
+}
+
+.error-icon {
+  position: absolute;
+  right: var(--spacing-4);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-red-500);
+  display: none;
+}
+
+.number-input.error + .error-icon {
+  display: block;
+}
+
+.error-message {
+  margin-top: var(--spacing-2);
+  font-size: 0.875rem;
+  color: var(--color-red-500);
+  display: none;
+}
+
+.error-message.visible {
+  display: block;
+}
+
+/* Base buttons */
+.base-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2);
+}
+
+.base-button {
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+  background-color: var(--color-gray-100);
+  color: var(--color-text-primary);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+.dark .base-button {
+  background-color: var(--color-gray-700);
+  color: var(--color-text-secondary);
+}
+
+.base-button:hover {
+  background-color: var(--color-gray-200);
+}
+
+.dark .base-button:hover {
+  background-color: var(--color-gray-600);
+}
+
+.base-button.active {
+  background-color: var(--color-primary-500);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.base-button-title {
+  font-weight: 600;
+}
+
+.base-button-desc {
+  font-size: 0.75rem;
+  margin-top: var(--spacing-1);
+  opacity: 0.8;
+}
+
+/* Type buttons */
+.type-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-2);
+}
+
+.type-button {
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+  background-color: var(--color-gray-100);
+  color: var(--color-text-primary);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+.dark .type-button {
+  background-color: var(--color-gray-700);
+  color: var(--color-text-secondary);
+}
+
+.type-button:hover {
+  background-color: var(--color-gray-200);
+}
+
+.dark .type-button:hover {
+  background-color: var(--color-gray-600);
+}
+
+.type-button.active {
+  background-color: var(--color-teal-500);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.type-button-title {
+  font-weight: 600;
+}
+
+.type-button-desc {
+  font-size: 0.75rem;
+  margin-top: var(--spacing-1);
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .base-buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .type-buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
